@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: "Open Sans",
+    sans-serif; 
+    font-size: 18px;
+    color: #444;
+    text-align: center;
+    line-height: 1.5;
+    margin: 0px;
+}
+  
+nav,
+footer {
+    padding: 0% 8%;
+    background-color: #aaa;
+}
+  
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-list {
+      margin: 20px 0px;
+      display: none;
+  }
+
+  .name {
+      margin: 16px 0;
+  }
+  
+  header {
+    padding: 12% 8%;
+    margin-top: 59px;
+  }
+
+  .headshot {
+    border-radius: 50%;
+    width: 135px;
+    height: 135px;
+  }
+  
+  section {
+    min-height: 200px;
+    padding: 8% 0;
+    background-color: #bbb;
+  }
+  
+  section:nth-child(even) {
+    background-color: #ddd;
+  }
+
+  ul {
+      list-style-type: none;
+      padding: 0px;
+  }
+
+  li {
+      display: inline-block;
+      padding: 6px 18px;
+  }
+
+.about-content, .work-content, .contact-content {
+    padding: 0px 8%;
+    font-size: 16px;
+  }
+  
+.about {
+      background: linear-gradient(rgba(255,255,255,.9), rgba(255,255,255,.9)), url("img/puppy-background.jpg");
+      background-position: 80% 35%;
+      background-size: cover;
+      background-repeat: no-repeat;
+}
+  
+h1 {
+    font-size: 1.125em;
+}
+
+.work-content {
+    text-align: left;
+}
+
+  .icon {
+    width: 35px;
+    display: inline-block;
+    padding: 5px 15px;
+    box-sizing: content-box;
+    margin-top: 35px;
+    cursor: pointer;
+  }
+
+  .proj-img {
+    max-width: 600px;
+    margin: 50px auto;
+  }
+
+  .proj-img img {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 768px) {
+
+    h1 {
+        font-size: 1.50em;
+        max-width: 768px;
+        text-align: left;
+        margin-left: 50px;
+    }
+    nav-list {
+        display: block;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 99px;
+    }
+
+    .headshot {
+        width: 175px;
+        height: 175px;
+    }
+
+    .name {
+        padding: 20px 0;
+    }
+
+    .about-content, .work-content {
+        font-size: 18px;
+        margin: 0 auto;
+    }
+
+    .about-content {
+        max-width: 860px;
+    }
+      
+  }
+
+  @media screen and (min-width: 992px) { 
+    .work-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+    .proj-img {
+        width: 55%;
+        max-width: 600px;
+        padding-left: 25px;
+    }
+
+
+    .proj-desc {
+        width: 45%;
+    }
+  }
+
+  @media screen and (min-width: 1300px) {
+    h1 {
+        margin-left: 0px;
+    }
+  }
