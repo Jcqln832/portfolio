@@ -26,22 +26,22 @@ footer {
     z-index: 10;
     padding: 15px 8%;
     text-align: left;
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-between; */
   }
 
   /* #navbar {
-      display: none;
+    display: none;
   } */
 
   .nav-list {
       margin: 20px 0px;
-      /* text-align: right;
-      text-align: center; */
-      display: inline;
+      /* text-align: right; */
+      text-align: center;
+      display: none;
   }
 
-  /* #btn-nav-toggle {
+  #btn-nav-toggle {
     position: absolute;
     right: 8%;
     padding: 0px;
@@ -53,10 +53,10 @@ footer {
     margin: 5px;
     border-top: 3px solid black;
     display: block;
-  } */
-  /* .active {
+  }
+  .active {
       display: block;
-  } */
+  }
 
   .name {
       /* margin: 16px 0; */
@@ -86,14 +86,14 @@ footer {
   }
 
   ul {
-      list-style-type: none;
-      padding: 0px;
+    list-style-type: none;
+    padding: 0px;
   }
 
   li {
-      /* display: block; */
-      display: inline;
-      padding: 8px;
+    display: block;
+    /* display: inline; */
+    padding: 8px;
   }
 
 .about-content, .work-content, .contact-content {
@@ -149,9 +149,9 @@ h1 {
         padding: 0px 8%;
       }
 
-      #navbar {
+    /* #navbar {
         display: block;
-    }
+    } */
 
     #btn-nav-toggle {
         display: none;
