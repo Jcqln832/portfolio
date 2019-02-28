@@ -8,12 +8,21 @@
 </head>
 <body>
     <nav role="navigation">
+        <!-- <button id="btn-nav-toggle" type="button" aria-controls="navbar" aria-label="Toggle navigation">
+            <span class="navbar-toggle" id="js-navbar-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </span>
+        </button> -->
         <span class="name">Jackie Galarza</span>
+        <div id="navbar">
         <ul class="nav-list">
-            <li><a href="">About</a></li>
-            <li><a href="">Projects</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#projects" class="nav-link" >Projects</a></li>
+            <li><a href="#contact" class="nav-link" >Contact</a></li>
         </ul>
+    </div>
     </nav>
     <main role="main">
         <header role="banner">
@@ -22,7 +31,7 @@
             </h1>
         </header>
 
-        <section class="about">
+        <section id="about">
             <div class="about-content">
                 <p>
                     I spent three years building WordPress websites for private mortgage lending companies before enrolling in the Thinkful Full Stack Flex program. Now that I’ve graduated, I'm ready to use my new skills in React, Node, and APIs alongside my CSS, visual design and UI skills.
@@ -33,7 +42,7 @@
             </div>
         </section>
 
-        <section class="projects">
+        <section id="projects">
            <h2>Selected Work</h2>
            <div class="work-content">
                <div class="proj-desc">
@@ -51,7 +60,7 @@
            </div>
         </section>
         
-        <section class="contact">
+        <section id="contact">
             <div class="contact-content">
                 <h3>Let's Connect</h3>
                 <p>Get in touch for opportunities or a friendly hello.</p>

@@ -24,17 +24,44 @@ footer {
     left: 0;
     right: 0;
     z-index: 10;
+    padding: 15px 8%;
+    text-align: left;
     display: flex;
     justify-content: space-between;
   }
 
+  /* #navbar {
+      display: none;
+  } */
+
   .nav-list {
       margin: 20px 0px;
-      display: none;
+      /* text-align: right;
+      text-align: center; */
+      display: inline;
   }
 
+  /* #btn-nav-toggle {
+    position: absolute;
+    right: 8%;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .bar {
+    width: 25px;
+    margin: 5px;
+    border-top: 3px solid black;
+    display: block;
+  } */
+  /* .active {
+      display: block;
+  } */
+
   .name {
-      margin: 16px 0;
+      /* margin: 16px 0; */
+      display: inline-block;
+      text-align: left;
   }
   
   header {
@@ -64,8 +91,9 @@ footer {
   }
 
   li {
-      display: inline-block;
-      padding: 6px 18px;
+      /* display: block; */
+      display: inline;
+      padding: 8px;
   }
 
 .about-content, .work-content, .contact-content {
@@ -73,12 +101,12 @@ footer {
     font-size: 16px;
   }
   
-.about {
-      background: linear-gradient(rgba(255,255,255,.9), rgba(255,255,255,.9)), url("img/puppy-background.jpg");
-      background-position: 80% 35%;
-      background-size: cover;
-      background-repeat: no-repeat;
-}
+/* #about {
+    background: linear-gradient(rgba(255,255,255,.9), rgba(255,255,255,.9)), url("img/puppy-background.jpg");
+    background-position: 80% 35%;
+    background-size: cover;
+    background-repeat: no-repeat;
+} */
   
 h1 {
     font-size: 1.125em;
@@ -114,8 +142,28 @@ h1 {
         text-align: left;
         margin-left: 50px;
     }
-    nav-list {
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 8%;
+      }
+
+      #navbar {
         display: block;
+    }
+
+    #btn-nav-toggle {
+        display: none;
+    }
+
+      .nav-list {
+          display: inline-block;
+      }
+
+      li {
+        display: inline-block;
+        padding: 6px 18px;
     }
 
     header {
@@ -131,7 +179,8 @@ h1 {
     }
 
     .name {
-        padding: 20px 0;
+        padding: 6px 0;
+        margin: 20px 0;
     }
 
     .about-content, .work-content {
@@ -141,8 +190,7 @@ h1 {
 
     .about-content {
         max-width: 860px;
-    }
-      
+    }   
   }
 
   @media screen and (min-width: 992px) { 
