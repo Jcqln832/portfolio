@@ -118,14 +118,17 @@ li:nth-child(2) {
 }
 
 .proj-link {
-  color: #6e396e;
+  color: #453d75;
+}
+
+.proj-link:hover {
+  color: #5c519c;
 }
 
 .nav-link:hover {
   color: #954d75;
 }
 
-  color: #6e396e;
 .about-content, .work-content, .contact-content {
   padding: 0px 8%;
   font-size: 16px;
@@ -197,15 +200,14 @@ h3 {
 }
 
 .mail {
-  color:  #254e70;
+  color:  #453d75;
   font-size: 18px;
   font-weight: bold;
 }
 
 .mail:hover {
-  color: #136884;
+  color: #954d75;
 }
-
 
 @media screen and (min-width: 768px) {
 
