@@ -124,9 +124,7 @@ li:nth-child(2) {
 .proj-link:hover {
   color: #5c519c;
 }
-main {
-  scroll-behavior: smooth;
-}
+
 .about-content, .work-content, .contact-content {
   padding: 0px 8%;
   font-size: 16px;
@@ -180,6 +178,8 @@ h1 {
 .proj-img {
   max-width: 600px;
   margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .proj-img img {
