@@ -107,16 +107,25 @@ li:nth-child(2) {
   border-bottom: 2px solid white;
 }
 
-.nav-link, .proj-link {
+.nav-link  {
   color: #bedfe5;
   text-decoration: none;
   font-weight: bold;
 }
 
-.nav-link:hover, .proj-link:hover {
+.nav-link:hover {
   color: #cbeef4;
 }
 
+.proj-link {
+  color: #6e396e;
+}
+
+.nav-link:hover {
+  color: #954d75;
+}
+
+  color: #6e396e;
 .about-content, .work-content, .contact-content {
   padding: 0px 8%;
   font-size: 16px;
