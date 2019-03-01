@@ -206,16 +206,15 @@ h3 {
 }
 
 .mail:hover {
-  color: #954d75;
+  color: #5c519c;
 }
 
 @media screen and (min-width: 768px) {
 
   h1 {
-      font-size: 1.50em;
-      max-width: 768px;
-      text-align: left;
-      /* margin-left: 50px; */
+    font-size: 1.50em;
+    max-width: 768px;
+    text-align: left;
   }
 
   nav {
