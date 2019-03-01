@@ -25,6 +25,7 @@ nav {
   z-index: 10;
   padding: 15px 8%;
   text-align: left;
+  box-shadow: 1px 2px 15px #3b3d44;
 }
 
 .nav-list {
@@ -64,13 +65,12 @@ nav {
   text-align: left;
   font-family: "karla";
   color: #f4f4f4;
-  /* color: #f2deda; */
 }
   
 header {
   padding: 10% 8%;
   margin-top: 59px;
-  background: linear-gradient(rgba(244,244,244,.8), rgba(232,244,246, .8)), url("img/puppy-background.jpg");
+  background: linear-gradient(rgba(244,244,244,.85), rgba(232,244,246, .85)), url("img/puppy-background.jpg");
   background-position: 80% 40%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -85,7 +85,7 @@ header {
   
 section {
   min-height: 200px;
-  padding: 4% 0;
+  padding: 8% 0;
   background-color: #bbb;
 }
 
@@ -124,20 +124,12 @@ li:nth-child(2) {
 .proj-link:hover {
   color: #5c519c;
 }
-
-.nav-link:hover {
-  color: #954d75;
+main {
+  scroll-behavior: smooth;
 }
-
 .about-content, .work-content, .contact-content {
   padding: 0px 8%;
   font-size: 16px;
-}
-  
- #about {
-  /* background: linear-gradient(to bottom, #eeeeee, #E0F2F1); */
-  background: linear-gradient(to bottom, #eeeeee, #d0cdd7);
-  padding-top: 0px;
 }
 
 .about-content {
@@ -155,7 +147,7 @@ h1 {
 }
 
 .work-content {
-    text-align: left;
+  text-align: left;
 }
 
 .icon {
@@ -165,11 +157,16 @@ h1 {
   box-sizing: content-box;
   margin-top: 35px;
   cursor: pointer;
+  transition: .25s;
+}
+.icon:hover {
+  transform: translate(0px, -2.5px);
 }
 
 #projects {
   background-color: #f4f4f4;
   border-top: 5px solid #254e70;
+  scroll-behavior: smooth;
 }
 
 #projects h2 {
@@ -190,9 +187,9 @@ h1 {
 }
 
 #contact {
-  /* background: linear-gradient(to bottom, #d0cdd7, #eeeeee); */
   border-top: 5px solid #254e70;
   background: linear-gradient(rgba(232,244,246,.8), rgba(244,244,244,.8));
+  scroll-behavior: smooth;
 }
 
 h3 {
@@ -258,7 +255,7 @@ h3 {
     font-size: 20px;
   }
 
-  .about-content, .work-content {
+  .about-content, .work-content, .contact-content {
     font-size: 18px;
     margin: 0 auto;
   }
