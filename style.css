@@ -14,7 +14,7 @@ body {
 nav,
 footer {
   padding: 0% 8%;
-  background-color: #3b3d44;
+  background-color: #022b3a;
 }
 
 nav {
@@ -29,7 +29,7 @@ nav {
 }
 
 .nav-list {
-  margin: 20px 0px;
+  margin: 15px 0px;
   text-align: center;
   display: none;
 }
@@ -51,7 +51,7 @@ nav {
 .bar {
   width: 25px;
   margin: 5px;
-  border-top: 3px solid #bedfe5;
+  border-top: 3px solid #faf3dd;
   display: block;
   background-color: transparent;
 }
@@ -64,7 +64,7 @@ nav {
   display: inline-block;
   text-align: left;
   font-family: "karla";
-  color: #f4f4f4;
+  color: #faf3dd;
 }
   
 header {
@@ -80,12 +80,14 @@ header {
   border-radius: 50%;
   width: 135px;
   height: 135px;
-  border: 5px solid #254e70;
+  margin-bottom: 20px;
+  border: 5px solid #022b3a;
+  box-shadow: 1px 3px 8px #767679;
 }
   
 section {
   min-height: 200px;
-  padding: 8% 0;
+  padding: 4em 0;
   background-color: #bbb;
 }
 
@@ -108,13 +110,13 @@ li:nth-child(2) {
 }
 
 .nav-link  {
-  color: #bedfe5;
+  color: #faf3dd;
   text-decoration: none;
   font-weight: bold;
 }
 
 .nav-link:hover {
-  color: #cbeef4;
+  text-decoration: underline;
 }
 
 .proj-link {
@@ -157,13 +159,15 @@ h1 {
   cursor: pointer;
   transition: .25s;
 }
+
 .icon:hover {
   transform: translate(0px, -2.5px);
 }
 
 #projects {
   background-color: #f4f4f4;
-  border-top: 5px solid #254e70;
+  /* border-top: 5px solid #254e70; */
+  border-top: 8px solid #002b3a;
   scroll-behavior: smooth;
 }
 
@@ -187,7 +191,7 @@ h1 {
 }
 
 #contact {
-  border-top: 5px solid #254e70;
+  border-top: 8px solid #022b3a;
   background: linear-gradient(rgba(232,244,246,.8), rgba(244,244,244,.8));
   scroll-behavior: smooth;
 }
@@ -215,17 +219,18 @@ h3 {
   }
 
   nav {
-      display: flex;
-      justify-content: space-between;
-      padding: 0px 8%;
-    }
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 8%;
+    max-height: 70px;
+  }
 
   #btn-nav-toggle {
-      display: none;
+    display: none;
   }
 
   .nav-list {
-      display: inline-block;
+    display: inline-block;
   }
 
   li {
@@ -239,24 +244,28 @@ h3 {
 
   header {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    margin-top: 82px;
+    margin-top: 70px;
   }
 
   .headshot {
     width: 175px;
     height: 175px;
+    margin-bottom: 0px;
   }
 
   .name {
-    padding: 6px 0;
+    /* padding: 6px 0; */
     margin: 20px 0;
     font-size: 20px;
   }
 
   .about-content, .work-content, .contact-content {
     font-size: 18px;
+  }
+
+  .work-content, .contact-content {
     margin: 0 auto;
   }
 
