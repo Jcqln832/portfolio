@@ -1,9 +1,20 @@
 'use strict';
 
-$('button, .nav-link').click(function(){
-    $(".nav-list").toggleClass("active");
-});
+// $('button, .nav-link').click(function(){
+//     $(".nav-list").toggleClass("active");
+// });
 
+$('.hamburger').click (function(){
+	$(this).toggleClass('open');
+	$(".nav-list").toggleClass("nav-list__active");
+	$("nav").toggleClass("nav-opacity");
+	$(".hamburger__meat").toggleClass("meat-opacity");
+
+})
+  
+// $('#btn-nav-toggle').click (function(){
+//   	$(".nav-list").toggleClass("active");
+//   }
 
  /* adapted from https://www.taniarascia.com/smooth-scroll-to-id-with-jquery/ */
 

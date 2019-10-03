@@ -26,38 +26,122 @@ nav {
   padding: 15px 8%;
   text-align: left;
   box-shadow: 1px 2px 15px #3b3d44;
+  transition: all .155s;
+  /* transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); */
+  transition-timing-function: cubic-bezier(0.42,0.57,0.58,0.18);
+}
+
+.nav-opacity {
+  opacity: .95;
 }
 
 .nav-list {
   margin: 15px 0px;
-  text-align: center;
-  display: none;
+  /* text-align: center; */
+  transition: all .159s;
+  transition-timing-function: cubic-bezier(0.42,0.57,0.58,0.18);
+  margin-top: -148px;
+  opacity: 0;
 }
 
-#btn-nav-toggle {
+.hamburger {
+  cursor: pointer;
   position: absolute;
   right: 8%;
   padding: 0px;
-  margin: 0px;
+  margin: -15px 0 0 0;
   background: transparent;
+  width: 48px;
+  height: 48px;
   border: 0px solid transparent;
+  transition: all .159s;
+  transition-timing-function: cubic-bezier(0.42,0.57,0.58,0.18);
 }
+
+.hamburger:focus {
+  outline: none;
+}
+
+.hamburger:focus > span {
+  background: #e07a5f;
+}
+
+.hamburger__top-bun,
+.hamburger__meat,
+.hamburger__bottom-bun {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  width: 20px;
+  height: 2px;
+  background: #faf3dd;
+  transform: rotate(0);
+  transition: all 0.25s;
+}
+
+.hamburger:hover [class*="-bun"] {
+  background: #e4ddc9;
+}
+
+.hamburger__top-bun {
+  top: 26px;
+  transform: translateY(-2px);
+}
+
+.hamburger__meat {
+  top: 30px;
+}
+
+.hamburger__bottom-bun {
+  bottom: 20px;
+  transform: translateY(10px);
+}
+
+.meat-opacity {
+  opacity: 0;
+}
+
+.open .hamburger__top-bun {
+  transform: 
+    rotate(45deg)
+    translateY(0px);
+}
+
+.open .hamburger__bottom-bun {
+  transform: 
+    rotate(-45deg) 
+    translateY(0px);
+} 
 
 .navbar-toggle {
   background: transparent;
   border: 0px solid transparent;
 }
 
-.bar {
+.navbar-toggle:hover {
+  opacity: .65;
+}
+
+/* .bar {
   width: 25px;
   margin: 5px;
   border-top: 3px solid #faf3dd;
   display: block;
   background-color: transparent;
-}
+} */
 
-.active {
+/* transform: translateY(-3px);
+    -webkit-transition: -webkit-transform .1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) .1008s;
+    transition: -webkit-transform .1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) .1008s;
+    transition: transform .1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) .1008s;
+    transition: transform .1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) .1008s, 
+    -webkit-transform .1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) .1008s; */
+
+.nav-list__active {
   display: block;
+  margin-top: 15px;
+  opacity: 1;
 }
 
 .name {
@@ -101,22 +185,46 @@ li {
   padding: 8px;
 }
 
-li:first-child {
+/* li:first-child {
   border-bottom: 2px solid white;
 }
 
 li:nth-child(2) {
   border-bottom: 2px solid white;
-}
+} */
 
 .nav-link  {
   color: #faf3dd;
   text-decoration: none;
   font-weight: bold;
+  padding-bottom: 2px;
+  transition: 0.2s ease-out;
+  position: relative;
+  display: inline-block;
+  width: 100%;
 }
 
-.nav-link:hover {
-  text-decoration: underline;
+.nav-link:hover::after{
+  position: absolute;
+  left: 0;
+ /* width: 0%; */
+  height: 2px;
+  bottom: -2px;
+  content: "";
+  background: #faf3dd;
+  transition: 0.18s ;
+  -webkit-animation-name: navItem-hover;
+  animation-name: navItem-hover;
+  -webkit-animation-duration: 0.175s;
+  animation-duration: 0.175s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  transition-timing-function: cubic-bezier(0.42,0.57,0.58,0.18);
+}
+
+@keyframes navItem-hover {
+  from { width: 0%; }
+  to { width: 100%; }
 }
 
 .proj-link {
@@ -193,6 +301,7 @@ h1 {
 #contact {
   border-top: 8px solid #022b3a;
   background: linear-gradient(rgba(232,244,246,.8), rgba(244,244,244,.8));
+  background: linear-gradient(rgba(244,244,244,.8), rgba(225,229,242,.8));
   scroll-behavior: smooth;
 }
 
@@ -209,8 +318,18 @@ h3 {
 .mail:hover {
   color: #5c519c;
 }
-
+/***** Media Queries *****/
 @media screen and (min-width: 768px) {
+
+.nav-link { 
+  display: inline-block;
+  width: 100%;
+}
+
+  .nav-list {
+    margin-top: 15px;
+    opacity: 1;
+  }
 
   h1 {
     font-size: 1.50em;
@@ -256,9 +375,9 @@ h3 {
   }
 
   .name {
-    /* padding: 6px 0; */
     margin: 20px 0;
     font-size: 20px;
+    font-weight: 900;
   }
 
   .about-content, .work-content, .contact-content {
