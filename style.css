@@ -27,7 +27,6 @@ nav {
   text-align: left;
   box-shadow: 1px 2px 15px #3b3d44;
   transition: all .155s;
-  /* transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); */
   transition-timing-function: cubic-bezier(0.42,0.57,0.58,0.18);
 }
 
@@ -37,7 +36,6 @@ nav {
 
 .nav-list {
   margin: 15px 0px;
-  /* text-align: center; */
   transition: all .159s;
   transition-timing-function: cubic-bezier(0.42,0.57,0.58,0.18);
   margin-top: -148px;
@@ -123,21 +121,6 @@ nav {
   opacity: .65;
 }
 
-/* .bar {
-  width: 25px;
-  margin: 5px;
-  border-top: 3px solid #faf3dd;
-  display: block;
-  background-color: transparent;
-} */
-
-/* transform: translateY(-3px);
-    -webkit-transition: -webkit-transform .1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) .1008s;
-    transition: -webkit-transform .1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) .1008s;
-    transition: transform .1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) .1008s;
-    transition: transform .1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) .1008s, 
-    -webkit-transform .1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) .1008s; */
-
 .nav-list__active {
   display: block;
   margin-top: 15px;
@@ -147,14 +130,14 @@ nav {
 .name {
   display: inline-block;
   text-align: left;
-  font-family: "karla";
   color: #faf3dd;
 }
   
 header {
   padding: 10% 8%;
   margin-top: 59px;
-  background: linear-gradient(rgba(244,244,244,.85), rgba(232,244,246, .85)), url("img/puppy-background.jpg");
+  /* background: linear-gradient(rgba(244,244,244,.85), rgba(232,244,246, .85)), url("img/puppy-background.jpg"); */
+  background: linear-gradient(rgba(244,244,244,.85), rgba(225,229,242,.9)), url("img/puppy-background.jpg");
   background-position: 80% 40%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -185,14 +168,6 @@ li {
   padding: 8px;
 }
 
-/* li:first-child {
-  border-bottom: 2px solid white;
-}
-
-li:nth-child(2) {
-  border-bottom: 2px solid white;
-} */
-
 .nav-link  {
   color: #faf3dd;
   text-decoration: none;
@@ -207,7 +182,6 @@ li:nth-child(2) {
 .nav-link:hover::after{
   position: absolute;
   left: 0;
- /* width: 0%; */
   height: 2px;
   bottom: -2px;
   content: "";
@@ -251,6 +225,7 @@ li:nth-child(2) {
 h1 {
   font-size: 1.125em;
   font-family: "karla";
+  font-family: 'Sumana';
   margin-bottom: 50px;
 }
 
@@ -274,17 +249,19 @@ h1 {
 
 #projects {
   background-color: #f4f4f4;
-  /* border-top: 5px solid #254e70; */
   border-top: 8px solid #002b3a;
+  min-height: 100vh;
   scroll-behavior: smooth;
 }
 
 #projects h2 {
   color: #212121;
+  font-family: 'Sumana';
 }
 
 .proj-desc {
   padding: 20px;
+  border-bottom: 3px solid #363537;
 }
 
 .proj-img {
@@ -292,21 +269,27 @@ h1 {
   margin-bottom: 40px;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
 }
 
-.proj-img img {
-  width: 100%;
+#proj-desc__list {
+  list-style-type: disc;
 }
 
 #contact {
   border-top: 8px solid #022b3a;
-  background: linear-gradient(rgba(232,244,246,.8), rgba(244,244,244,.8));
+  /* background: linear-gradient(rgba(232,244,246,.8), rgba(244,244,244,.8)); */
   background: linear-gradient(rgba(244,244,244,.8), rgba(225,229,242,.8));
   scroll-behavior: smooth;
 }
 
+.contact-content > h2 {
+  font-family: 'Sumana';
+}
+
 h3 {
   color: #212121;
+  font-family: 'Sumana';
 }
 
 .mail {
@@ -318,6 +301,7 @@ h3 {
 .mail:hover {
   color: #5c519c;
 }
+
 /***** Media Queries *****/
 @media screen and (min-width: 768px) {
 
@@ -396,18 +380,24 @@ h3 {
   @media screen and (min-width: 992px) { 
     .work-content {
         display: flex;
-        align-items: center;
-        justify-content: center;
+        flex-wrap: wrap;
+        /* align-items: center;
+        justify-content: center; */
       }
 
     .proj-img {
-      width: 55%;
+      /* width: 55%; */
       max-width: 600px;
       margin: 0;
     }
 
     .proj-desc {
-        width: 45%;
+      width: 50%;
+      border-right: 3px solid #363537;
+      border-bottom: 3px solid #363537;
+    }
+    .proj-desc:nth-child(even) {
+      border-right: 0px solid transparent;
     }
   }
 
@@ -417,5 +407,14 @@ h3 {
     }
     .about-content {
       max-width: 900px;
-   } 
+   }
+   .proj-desc {
+    width: 33%;
+  }
+  .proj-desc:nth-child(even) {
+    border-right: 3px solid #363537;
+  }
+  .proj-desc:nth-child(3) {
+    border-right: 0px solid transparent;
+  }
   }
