@@ -129,7 +129,6 @@ nav {
   opacity: 1;
 }
 
-
 .nav-link  {
   color: #faf3dd;
   text-decoration: none;
@@ -281,16 +280,13 @@ h3 {
 }
 
 .proj-link {
-  color: #453d75;
+  color: #4c63af;
+  transition: all .155s;
+  transition-timing-function: ease-out;
 }
 
 .proj-link:hover {
-  color: #5c519c;
-}
-
-.proj-link2 {
-  display: inline-block;
-  margin-left: 68px;
+  color: #344479;
 }
 
 /***** CONTACT SECTION *****/
@@ -306,13 +302,15 @@ h3 {
 }
 
 .mail {
-  color:  #453d75;
+  color:  #4c63af;
   font-size: 18px;
   font-weight: bold;
+  transition: all .155s;
+  transition-timing-function: ease-out;
 }
 
 .mail:hover {
-  color: #5c519c;
+  color: #344479;
 }
 
 /***** MEDIA QUERIES *****/
