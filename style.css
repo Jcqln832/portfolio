@@ -17,6 +17,8 @@ footer {
   background-color: #022b3a;
 }
 
+/***** TOP NAVIGATION *****/
+
 nav {
   position: fixed;
   top: 0;
@@ -74,7 +76,7 @@ nav {
   width: 20px;
   height: 2px;
   background: #faf3dd;
-  transform: rotate(0);
+  /* transform: rotate(0); */
   transition: all 0.25s;
 }
 
@@ -127,12 +129,48 @@ nav {
   opacity: 1;
 }
 
+
+.nav-link  {
+  color: #faf3dd;
+  text-decoration: none;
+  font-weight: bold;
+  padding-bottom: 2px;
+  transition: 0.2s ease-out;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.nav-link:hover::after {
+  position: absolute;
+  left: 0;
+  height: 2px;
+  bottom: -2px;
+  content: "";
+  background: #faf3dd;
+  transition: 0.18s ;
+  -webkit-animation-name: navItem-hover;
+  animation-name: navItem-hover;
+  -webkit-animation-duration: 0.175s;
+  animation-duration: 0.175s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  transition-timing-function: cubic-bezier(0.42,0.57,0.58,0.18);
+}
+
+@keyframes navItem-hover {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
 .name {
   display: inline-block;
   text-align: left;
   color: #faf3dd;
 }
-  
+
+/***** HERO SECTION *****/
+
 header {
   padding: 10% 8%;
   margin-top: 59px;
@@ -159,54 +197,12 @@ section {
 }
 
 ul {
-  list-style-type: none;
   padding: 0px;
 }
 
 li {
   display: block;
   padding: 8px;
-}
-
-.nav-link  {
-  color: #faf3dd;
-  text-decoration: none;
-  font-weight: bold;
-  padding-bottom: 2px;
-  transition: 0.2s ease-out;
-  position: relative;
-  display: inline-block;
-  width: 100%;
-}
-
-.nav-link:hover::after{
-  position: absolute;
-  left: 0;
-  height: 2px;
-  bottom: -2px;
-  content: "";
-  background: #faf3dd;
-  transition: 0.18s ;
-  -webkit-animation-name: navItem-hover;
-  animation-name: navItem-hover;
-  -webkit-animation-duration: 0.175s;
-  animation-duration: 0.175s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  transition-timing-function: cubic-bezier(0.42,0.57,0.58,0.18);
-}
-
-@keyframes navItem-hover {
-  from { width: 0%; }
-  to { width: 100%; }
-}
-
-.proj-link {
-  color: #453d75;
-}
-
-.proj-link:hover {
-  color: #5c519c;
 }
 
 .about-content, .work-content, .contact-content {
@@ -228,6 +224,13 @@ h1 {
   margin-bottom: 50px;
 }
 
+h3 {
+  color: #212121;
+  font-family: 'Sumana';
+  margin-bottom: 35px;
+  margin-top: 0px;
+}
+
 .work-content {
   text-align: left;
 }
@@ -241,13 +244,12 @@ h1 {
   cursor: pointer;
   transition: .25s;
 }
-.boldest {
-  font-weight: 900;
-}
 
 .icon:hover {
   transform: translate(0px, -2.5px);
 }
+
+/***** SELECTED WORK SECTION *****/
 
 #projects {
   background-color: #f4f4f4;
@@ -266,6 +268,10 @@ h1 {
   border-bottom: 3px solid #363537;
 }
 
+.proj-desc:last-child {
+  border-bottom: 0px;
+}
+
 .proj-img {
   max-width: 600px;
   margin-bottom: 40px;
@@ -274,14 +280,20 @@ h1 {
   width: 100%;
 }
 
-#proj-desc__list {
-  list-style-type: disc;
+.proj-link {
+  color: #453d75;
+}
+
+.proj-link:hover {
+  color: #5c519c;
 }
 
 .proj-link2 {
   display: inline-block;
   margin-left: 68px;
 }
+
+/***** CONTACT SECTION *****/
 
 #contact {
   border-top: 8px solid #022b3a;
@@ -290,11 +302,6 @@ h1 {
 }
 
 .contact-content > h2 {
-  font-family: 'Sumana';
-}
-
-h3 {
-  color: #212121;
   font-family: 'Sumana';
 }
 
@@ -308,7 +315,8 @@ h3 {
   color: #5c519c;
 }
 
-/***** Media Queries *****/
+/***** MEDIA QUERIES *****/
+
 @media screen and (min-width: 768px) {
 
   .nav-link { 
