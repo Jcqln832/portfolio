@@ -263,7 +263,7 @@ h3 {
 }
 
 .proj-desc {
-  padding: 20px;
+  padding: 0px;
   border-bottom: 3px solid #363537;
 }
 
@@ -386,7 +386,11 @@ h3 {
 
   .about-content {
     max-width: 860px;
-  }   
+  }
+
+  .proj-desc {
+    padding: 20px;
+  }
 }
 
 @media screen and (min-width: 992px) { 
@@ -410,7 +414,7 @@ h3 {
   }
 }
 
- @media screen and (min-width: 1300px) {
+@media screen and (min-width: 1300px) {
   h1 {
     margin-left: 0px;
   }
