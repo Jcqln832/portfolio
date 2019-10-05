@@ -191,7 +191,7 @@ header {
   
 section {
   min-height: 200px;
-  padding: 2em 0;
+  padding: 2em 8%;
   background-color: #bbb;
 }
 
@@ -205,7 +205,7 @@ li {
 }
 
 .about-content, .work-content, .contact-content {
-  padding: 0px 8%;
+  /* padding: 0px 8%; */
   font-size: 16px;
 }
 
@@ -328,9 +328,9 @@ h3 {
   }
 
   section {
-    padding: 4em 0;
+    padding: 4em 8%;
   }
-  
+
   h1 {
     font-size: 1.50em;
     max-width: 768px;
@@ -358,7 +358,7 @@ h3 {
 
   li {
     display: inline-block;
-    padding: 6px 18px;
+    /* padding: 6px 18px; */
   }
 
   li:first-child, li:nth-child(2) {
@@ -392,12 +392,16 @@ h3 {
     margin: 0 auto;
   }
 
+  .about-content, .contact-content {
+    padding: 0 8%;
+  }
+
   .about-content {
     max-width: 860px;
   }
 
   .proj-desc {
-    padding: 20px;
+    padding: 30px;
   }
 }
 
@@ -417,8 +421,13 @@ h3 {
     border-right: 3px solid #363537;
     border-bottom: 3px solid #363537;
   }
+
   .proj-desc:nth-child(even) {
     border-right: 0px solid transparent;
+  }
+
+  .proj-desc:nth-child(3) {
+    border-bottom: 0px solid transparent;
   }
 }
 
@@ -437,5 +446,6 @@ h3 {
   }
   .proj-desc:nth-child(3) {
     border-right: 0px solid transparent;
+    border-bottom: 3px solid #363537;
   }
 }
