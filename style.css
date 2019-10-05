@@ -327,6 +327,10 @@ h3 {
     opacity: 1;
   }
 
+  .nav-list > li {
+    padding: 6px 18px;
+  }
+
   section {
     padding: 4em 8%;
   }
