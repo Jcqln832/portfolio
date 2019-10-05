@@ -29,8 +29,11 @@ $('.hamburger').click (function(){
 	}, 300, 'swing' );
 });
 
-// let nodeArray = [
-//     $('.about-content'),
-//     $(".headshot")
-// ];
+//reveal projects
+ScrollReveal().reveal('.one', { easing: 'ease-in-out', duration: 550, delay: 100, origin: "top" });
+ScrollReveal().reveal('.two', { easing: 'ease-in-out', duration: 550, delay: 250, origin: "top" });
+ScrollReveal().reveal('.three', { easing: 'ease-in-out', duration: 550, delay: 400, origin: "top" });
+ScrollReveal().reveal('.four', { easing: 'ease-in-out', duration: 550, delay: 550, origin: "top" });
+
+//reveal contact section content
 ScrollReveal().reveal('.contact-content', { easing: 'ease-in-out', duration: 550, delay: 200 });
