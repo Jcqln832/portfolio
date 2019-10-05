@@ -227,7 +227,7 @@ h3 {
   color: #212121;
   font-family: 'Sumana';
   margin-bottom: 35px;
-  margin-top: 0px;
+  margin-top: 30px;
 }
 
 .work-content {
@@ -273,7 +273,7 @@ h3 {
 
 .proj-img {
   max-width: 600px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -331,6 +331,10 @@ h3 {
     font-size: 1.50em;
     max-width: 768px;
     text-align: left;
+  }
+
+  h3 {
+    margin-top: 0px;
   }
 
   nav {
